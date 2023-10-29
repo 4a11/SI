@@ -64,7 +64,38 @@ print(c)
 ```                            
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task2.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/task3.png)
+
+### Задание 4
+Выведите в консоль три строки. Первая – трансформация любого типа переменной в bool. Вторая – трансформация любого типа переменной в float или int. Третья – трансформация любого типа переменной в str.
+
+```python
+a = 'first'
+b = 100
+c = None
+
+print(bool(a))
+print(float(b))
+print(str(c))
+```
+
+#### Результат.
+
+![Меню](https://github.com/4a11/SI/blob/main/pic/task4.png)
+
+### Задание 5
+Присвойте трем переменным различные значения, воспользовавшись функцией input()
+
+```python
+a = input("first:")
+b = input("second:")
+c = input("third:")
+
+print(a,b,c)
+```
+#### Результат.
+
+![Меню](https://github.com/4a11/SI/blob/main/pic/task5.png)
 
 ---
 
