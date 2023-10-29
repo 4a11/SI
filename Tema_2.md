@@ -273,7 +273,9 @@ print(int(a))
 ```
 #### Результат
 
+В случае ввода числа:
 ![Меню](https://github.com/4a11/SI/blob/main/pic/SR3.png)
+В ином другом случаее:
 ![Меню](https://github.com/4a11/SI/blob/main/pic/SR3_1.png)
 
 ### Задание 4
