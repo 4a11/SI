@@ -254,6 +254,15 @@ print(bool(a))
 ![Меню](https://github.com/4a11/SI/blob/main/pic/SR1.png)
 
 ### Задание 2
+Присвоить значения трем переменным и вывести их в консоль, используя только две строки редактора кода
+
+```python
+a = b = c = 2
+print(a, b, c)
+```
+#### Результат
+
+![Меню](https://github.com/4a11/SI/blob/main/pic/SR2.png)
 
 ### Задание 3
 
