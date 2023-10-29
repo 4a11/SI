@@ -31,7 +31,7 @@ print(1.23)
 ```
 ### Результат.
 
-![Меню](C:\Users\Дима\Documents\GitHub\SI\pic\Lab2_1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/Lab2_1.png)
 
 ## Выводы
 
