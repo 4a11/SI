@@ -57,31 +57,50 @@ else:
 ![Меню](https://github.com/4a11/SI/blob/main/pic/lab3_2.png)
 
 ### Задание 3
+Напишите программу, в которой будет проверяться есть ли переменная в указанном массиве используя логический оператор in. Самостоятельно посмотрите, как работает программа со значениями которых нет в массиве numbers.
 
 ```python
-
+nums = [1, 2, 3, 6]
+num = int(input('Введите чилсо: '))
+if num in nums:
+    print('Число есть в массиве')
+else:
+    print('Числа нет в массиве')
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab3_3_1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab3_3_2.png)
 
 ### Задание 4
+Напишите программу, которая будет определять находится ли переменная в указанном массиве и если да, то проверьте четная она или нет. Самостоятельно протестируйте данную программу с разными значениями переменной value
 
 ```python
 
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab3_4_1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab3_4_2.png)
 
 ### Задание 5
 
 ```python
-
+for i in range(10):
+    if i == 0:
+        i += 2
+    if i == 1:
+        continue
+    if i == 2 or i == 3:
+        print("i = 2 or 3")
+    elif i in [4,5,6]:
+        print("i = 4,5 or 6")
+    else:
+        break
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab3_5.png)
 
 ### Задание 6
 
