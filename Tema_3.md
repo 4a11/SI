@@ -305,7 +305,21 @@ elif a >= 6 and a < 10:
 ### Задание 4
 
 ```python
+import re
 
+txt = input('Введите текст: ')
+chars = ['a', 'e', 'i', 'o', 'u']
+charsCount = 0
+
+for i in txt:
+    if i in chars:
+        charsCount += 1
+
+print(f'Всего символов: {len(txt)}')
+print(f'Тескт в нижнем регистре: {txt.lower()}')
+print(f'charsCount)
+print(re.sub('ugly', 'beauty', txt))
+print(txt.startswith('The') and txt.endswith('end'))
 ```
 #### Результат.
  
@@ -316,18 +330,21 @@ elif a >= 6 and a < 10:
 
 ```python
 counter = 0
-values = [0, 2, 4, 6, 8, 10]
 string = 'hello'
 memory = ' world'
-
-print(string + ' world')
+values = [0, 2, 4, 6, 8, 10]
 
 while counter != 10:
     if counter in values:
-        print(string)
         print(string + memory)
+        print(string)
 
     counter += 1
+
+string = string + ' world'
+memory = string
+
+print(memory)
 ```
 #### Результат.
 
