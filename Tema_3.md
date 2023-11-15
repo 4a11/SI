@@ -300,7 +300,7 @@ elif a >= 6 and a < 10:
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam3_3.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam3_3_1.png)
 
 ### Задание 4
 
