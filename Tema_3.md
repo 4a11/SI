@@ -308,18 +308,30 @@ elif a >= 6 and a < 10:
 
 ```
 #### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task1.png)
+ 
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam3_4.png)
 
 
 ### Задание 5
 
 ```python
+counter = 0
+values = [0, 2, 4, 6, 8, 10]
+string = 'hello'
+memory = ' world'
 
+print(string + ' world')
+
+while counter != 10:
+    if counter in values:
+        print(string)
+        print(string + memory)
+
+    counter += 1
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam3_5.png)
 
 ### Задание 6
 
