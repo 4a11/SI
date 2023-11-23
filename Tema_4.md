@@ -280,7 +280,10 @@ print(f"Площадь: {result}")
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_10.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_10_1.png)
+
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_10_2.png)
+
 
 
 ## Самостоятельная работа №4
