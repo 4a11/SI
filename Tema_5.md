@@ -261,29 +261,32 @@ print(fixBadGrades(third))
 
 main.py
 ```python
-import second
+list_1 = [1, 1, 3, 3, 1]
+list_2 = [5, 5, 5, 5, 5, 5, 5]
+list_3 = [2, 2, 1, 2, 2, 5, 6, 7, 3, 2, 2]
 
-a = int(input("Введите 1-ю сторону: "))
-b = int(input("Введите 2-ю сторону: "))
-c = int(input("Введите 3-ю сторону: "))
 
-print(second.Gerona(a, b, c))
+def countSame(_list):
+    same_values = []
+    same_values_count = []
+    for i in _list:
+        if i not in same_values:
+            same_values.append(i)
+            same_values_count.append(_list.count(i))
 
+    for i in range(len(same_values_count)):
+        for j in range(1, same_values_count[i] + 1):
+            if same_values_count[i] != 1:
+                same_values.append(str(same_values[i]) * j)
+
+    return same_values
+
+
+print(countSame(list_1))
+print(countSame(list_2))
+print(countSame(list_3))
 ```
-
-
-second.py
-```py
-import math
-
-def Gerona(a, b, c):
-    p = (a+b+c)/2
-    return math.sqrt(p*(p-a)*(p-b)*(p-c))
-
-
-```
-
 
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam4_5.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam5_5.png)
