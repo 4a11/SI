@@ -39,7 +39,7 @@ if __name__=='__main__':
 ![Меню](https://github.com/4a11/SI/blob/main/pic/lab41.png)
 
 ### Задание 2
-
+Напишите функцию, которая выполняет любые арифметические действия, возвращает при помощи return значение в место, откуда вызывали функцию. Выведите результат в консоль. Вызовите функцию используя “точку входа”.
 
 ```python
 def main():
@@ -62,73 +62,191 @@ if __name__=='__main__':
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task2.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_2_1.png)
+
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_2_2.png)
 
 ### Задание 3
-
+Напишите функцию, в которую передаются два аргумента, над ними производится арифметическое действие, результат возвращается туда, откуда эту функцию вызывали. Выведите результат в консоль. Вызовите функцию в любом небольшом цикле.
 
 ```python
+def main(one, two):
+    result = one + two
+    return result
 
-```                            
+for i in range (5):
+    x=1
+    y=10
+    answer = main (x,y )
+    print(answer)
+```
+
+```python
+def main(one, two):
+    return one + two
+
+
+for i in range (5):
+
+    answer = main (one=1, two=10 )
+    print(answer)
+```  
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task3.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_3_1.png)
+
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_3_2.png)
+
 
 ### Задание 4
-
+Напишите функцию, на вход которой подается какое-то изначальное неизвестное количество аргументов, над которыми будет производится арифметические действия. Для выполнения задания необходимо использовать кортеж “*args”. На скриншоте ниже приведен пример такой программы с комментариями. Для закрепления понимания работы с кортежами настоятельно рекомендуем поменять аргументы вызова функции, вручную посчитать результат, только потом запустить программу с новыми значениями и проверить себя, насколько вы поняли данный аспект программирования.
 
 ```python
+def main (x, *args):
+    one = x
+    two = sum(args)
+    three = float(len(args))
+    print(f"one{one}\ntwo={two}\nthree={three}")
+
+    return x + sum (args)/ float(len(args))
+
+if __name__ == '__main__':
+    result = main (10, 0 ,1 ,2,-1,-2,-5,)
+    print(f"\nresult={result}")
 
 ```
 
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task4.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_4.png)
+
 
 ### Задание 5
-
+Напишите функцию, которая на вход получает кортеж “**kwargs” и при помощи цикла выводит значения, поступившие в функцию. На скриншоте ниже указаны два варианта вызова функции с “**kwargs” и два варианта работы с данными, поступившими в эту функцию. Комментарии в коде и теоретическая часть помогут вам разобраться в этом нелегком аспекте. Вызовите функцию используя “точку входа”.
 
 ```python
+def main (**kwargs):
+    for i in kwargs.items():
+        print(i[0], i[1])
+
+    print()
+
+    for key in kwargs:
+        print(f"{key}={kwargs[key]}")
+
+if __name__ == '__main__':
+    main(x=[1,2,3],y=[3,3,0],z=[2,3,0], q=[3,3,0],w=[3,3,0])
+    print()
+    main(**{'x': [1,2,3], 'y':[3,3,0]})
 
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task5.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_5.png)
 
 ### Задание 6
-
+Напишите две функции. Первая – получает в виде параметра “**kwargs”. Вторая считает среднее арифметическое из значений первой функции. Вызовите первую функцию используя “точку входа” и минимум 4 аргумента.
 
 ```python
+def main (**kwargs):
+    for i,j in kwargs.items():
+        print(f"{i}. Mean = {mean(j)}")
 
+def mean(data):
+    return  sum(data)/ float(len(data))
+    
+if __name__ == '__main__':
+    main(x=[1,2,3],y=[3,3,0])
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task6.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_6.png)
 
 ### Задание 7
-
+Создайте дополнительный файл .py. Напишите в нем любую функцию, которая будет что угодно выводить в консоль, но не вызывайте ее в нем. Откройте файл main.py, импортируйте в него функцию из нового файла и при помощи “точки входа” вызовите эту функцию.
 
 ```python
+import say_hello
+if __name__=='__main__':
+    say_hello.say_hello()
+```
 
+```python
+def say_hello():
+    print('Hello Dmitrii!')
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task7.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_7.png)
 
 ### Задание 8
-
+Напишите программу, которая будет выводить корень, синус, косинус полученного от пользователя числа
 
 ```python
+import math
 
+def main():
+    value =int (input('Введите значение:'))
+    print(math.sqrt(value))
+    print(math.sin(value))
+    print(math.cos(value))
+
+if __name__== '__main__' :
+    main()
+
+```
+
+```python
+from math import sqrt, sin , cos
+
+def main():
+    value =int (input('Введите значение:'))
+    print(sqrt(value))
+    print(sin(value))
+    print(cos(value))
+
+if __name__== '__main__' :
+    main()
+```
+
+```python
+from math import *
+def main():
+    value =int (input('Введите значение:'))
+    print(sqrt(value))
+    print(sin(value))
+    print(cos(value))
+
+if __name__== '__main__' :
+    main()
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task8.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_8_1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_8_2.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_8_3.png)
 
 ### Задание 9
-
+Напишите программу, которая будет рассчитывать какой день недели будет через n-нное количество дней, которые укажет пользователь. В результате день недели указан в виде цифры, где 1 = понедельник, 2 = вторник, 3 = среда и так далее
 
 ```python
+from datetime import datetime as dt
+from datetime import timedelta as td
+
+def main():
+    print(
+        f"Сегодня {dt.today().date()}."
+        f"День недели - {dt.today().isoweekday()}"
+    )
+    n = int(input('Введите количество дней:'))
+    today = dt.today()
+    result = today + td(days=n)
+    print(
+        f"Через {n} дней будет {result.date()}."
+        f"День недели - {result.isoweekday()}"
+    )
+if __name__ == '__main__':
+    main()
 
 ```
 #### Результат.
@@ -139,11 +257,30 @@ if __name__=='__main__':
 
 
 ```python
+global result
 
+def rectangle():
+    a=float(input("Ширина:"))
+    b =float(input("Высота:"))
+    global  result
+    result= a*b
+
+def triangle():
+    a= float(input("Основание:"))
+    h= float(input("Высота:"))
+    global result
+    result= 0.5 * a * h
+figure = input("1-прямоуголник, 2- треугольник:")
+if figure=='1':
+    rectangle()
+elif figure =='2':
+    triangle()
+
+print(f"Площадь: {result}")
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task10.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_10.png)
 
 
 ## Самостоятельная работа №4
