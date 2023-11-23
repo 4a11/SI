@@ -21,22 +21,44 @@
 Работу проверили:
 - к.э.н., доцент Панов М.А.
 
-## Лабораторная работа №1
+## Лабораторная работа №4
 ### Задание 1
-
+Напишите функцию, которая выполняет любые арифметические 
+действия и выводит результат в консоль. Вызовите функцию используя 
+“точку входа”.
 
 ```python
+def main():
+    print(2+2)
 
+if __name__=='__main__':
+    main()
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab41.png)
 
 ### Задание 2
 
 
 ```python
+def main():
+    return 2+2
+    
 
+if __name__=='__main__':
+    print(main())
+```
+
+```python
+def main():
+    result= 2+2
+    return result
+
+
+if __name__=='__main__':
+    answer=main()
+    print(answer)
 ```
 #### Результат.
 
