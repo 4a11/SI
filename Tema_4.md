@@ -251,7 +251,7 @@ if __name__ == '__main__':
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task9.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab4_9.png)
 
 ### Задание 10
 
