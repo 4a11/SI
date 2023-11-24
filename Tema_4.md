@@ -348,7 +348,7 @@ if __name__ == "__main__":
 
 ![Меню](https://github.com/4a11/SI/blob/main/pic/sam4_2.png)
 
-#### Вывод
+### Вывод
 
 Узнал о рекурсивных функциях.
 
@@ -371,7 +371,7 @@ for i in range(5):
 
 ![Меню](https://github.com/4a11/SI/blob/main/pic/sam4_3.png)
 
-#### Вывод
+### Вывод
 
 узнал про модуль `datetime` и `time`.
 
@@ -401,7 +401,7 @@ if __name__ == "__main__":
 
 ![Меню](https://github.com/4a11/SI/blob/main/pic/sam4_4.png)
 
-#### Вывод
+### Вывод
 
 Узнал как делать функции под неизвесное кол-во входных данных.
 
@@ -438,6 +438,6 @@ def Gerona(a, b, c):
 
 ![Меню](https://github.com/4a11/SI/blob/main/pic/sam4_5.png)
 
-#### Вывод
+### Вывод
 
 Узнал про обмен функциями между 2-я разными файлами кода.
