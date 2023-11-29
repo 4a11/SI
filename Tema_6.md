@@ -1,4 +1,4 @@
-# Тема 2. Базовые операции языка Python
+![image](https://github.com/4a11/SI/assets/82211506/a7663dfc-7f4e-4b2a-b774-7bb2ac79e0a5)# Тема 2. Базовые операции языка Python
 Отчет по Теме #2 выполнил(а):
 - Прокин Дмитрий Сергеевич
 - ОЗИВТ-22-1-у
@@ -124,53 +124,123 @@
 ![Меню](https://github.com/4a11/SI/blob/main/pic/task10.png)
 
 
-## Самостоятельная работа №4
+## Самостоятельная работа №6
 
 ### Задание 1
+При создании сайта у вас возникла потребность обрабатывать данные пользователя в странной форме, а потом переводить их в нужные вам форматы. Вы хотите принимать от пользователя последовательность чисел, разделенных пробелом, а после переформатировать эти данные в список и кортеж. Реализуйте вашу задумку. Для получения начальных данных используйте input(). Результатом программы будет выведенный список и кортеж из начальных данных.
 
 ```python
+data = input("Введите данные: ")
+
+def ReformateData(dt):
+    list_dt = list(dt.split(" "))
+    cortej_dt = tuple(dt.split(" "))
+
+    return list_dt, cortej_dt
+
+print(ReformateData(data))
 
 ```
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam5_1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam6_1.png)
 
 ### Задание 2
-
+Николай знает, что кортежи являются неизменяемыми, но он очень упрямый и всегда хочет доказать, что он прав. Студент решил создать функцию, которая будет удалять первое появление определенного элемента из кортежа по значению и возвращать кортеж без него. Попробуйте повторить шедевр не признающего авторитеты начинающего программиста. Но учтите, что Николай не всегда уверен в наличии элемента в кортеже (в этом случае кортеж вернется функцией в исходном виде).
 
 ```python
+test_input1 = (1, 2, 3)
+test_input2 = (1, 2, 3, 1, 2, 3, 4, 5, 2, 3, 4, 2, 4, 2)
+test_input3 = (2, 3, 6, 6, 4, 2)
+
+def ChanceConstant(dt, char):
+    mem = list(dt)
+    if mem.count(char) >= 1:
+        mem.remove(char)
+    return tuple(mem)
+
+print(ChanceConstant(test_input1, 1))
+print(ChanceConstant(test_input2, 3))
+print(ChanceConstant(test_input3, 9))
+
 
 ```
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam5_2.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam6_2.png)
 
 ### Задание 3
+Ребята поспорили кто из них одним нажатием на numpad наберет больше повторяющихся цифр, но не понимают, как узнать победителя. Вам им нужно в этом помочь. Дана строка в виде случайной последовательности чисел от 0 до 9 (длина строки минимум 15 символов). Требуется создать словарь, который в качестве ключей будет принимать данные числа (т. е. ключи будут типом int), а в качестве значений – количество этих чисел в имеющейся последовательности. Для построения словаря создайте
 
 ```python
+import random
+from collections import Counter
 
+rand_str = ""
+
+while len(rand_str) < 15:
+    rand_str += str(random.randint(0, 9))
+
+
+def Dict(string):
+
+    _dict = Counter(string)
+
+    while len(_dict) > 3:
+        _dict.popitem()
+
+    return dict(sorted(_dict.items()))
+
+
+print(Dict(rand_str))
 ```
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam5_3.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam6_3.png)
 
 
 ### Задание 4
+Ваш хороший друг владеет офисом со входом по электронным картам, ему нужно чтобы вы написали программу, которая показывала в каком порядке сотрудники входили и выходили из офиса. Определение сотрудника происходит по id. Напишите функцию, которая на вход принимает кортеж и случайный элемент (id), его можно придумать самостоятельно. Требуется вернуть новый кортеж, начинающийся с первого появления элемента в нем и заканчивающийся вторым его появлением включительно. Если элемента нет вовсе – вернуть пустой кортеж. Если элемент встречается только один раз, то вернуть кортеж, который начинается с него и идет до конца исходного.
 
 ```python
+test_input1 = (1, 2, 3)
+test_input2 = (1, 8, 3, 4, 8, 8, 9, 2)
+test_input3 = (1, 2, 8, 5, 1, 2, 9)
 
+def ChangeConst(dt, id):
+    if id in dt:
+        if dt.count(id) > 1:
+            first_index = dt.index(id)
+            second_index = dt.index(id, first_index + 1) + 1
+            return dt[first_index:second_index]
+        else:
+            return dt[dt.index(id):]
+    else:
+        return ()
+
+
+print(ChangeConst(test_input1, 8))
+print(ChangeConst(test_input2, 8))
+print(ChangeConst(test_input3, 8))
 ```
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam5_4.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam6_4.png)
 
 ### Задание 5
+Напишите функцию tpl_sort(), которая сортирует кортеж, состоит из целых чисел по возрастанию и возвращает его. Если хотя бы один элемент не является целым числом, то функция возвращает исходный кортеж.
 
-main.py
 ```python
+def tpl_sort(tpl):
+    for element in tpl:
+        if not isinstance(element, int):
+            return tpl
+    return tuple(sorted(tpl))
 
+print(tpl_sort((5, 5, 3, 1, 9)))
+print(tpl_sort((5, 5, 2.1, '1', 9)))
 ```
 
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam5_5.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam6_5.png)
