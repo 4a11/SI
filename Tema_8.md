@@ -126,7 +126,7 @@
 ## Самостоятельная работа №8
 
 ### Задание 1
-
+Самостоятельно создайте класс и его объект. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли
 
 ```python
 class Person:
@@ -141,7 +141,7 @@ Person.say_hello()
 ![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_1.png)
 
 ### Задание 2
-
+Самостоятельно создайте атрибуты и методы для ранее созданного класса. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли
 
 ```python
 class Person:
@@ -159,11 +159,10 @@ dmitrii_object.say_hello()
 ```
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_2.png)
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_2_1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam8_2.png)
 
 ### Задание 3
-
+Самостоятельно реализуйте наследование, продолжая работать с ранее созданным классом. Оно должно отличаться, от того, что указано в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 
 ```python
 class Person(object):
@@ -192,23 +191,64 @@ print(student_object.write_off())
 
 
 ### Задание 4
-
-
+Самостоятельно реализуйте инкапсуляцию, продолжая работать с ранее созданным классом. Она должна отличаться, от того, что указана в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 
 ```python
+class Person:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
 
+    def say_hello(self):
+        print(f"{self.name} вас приветствует.")
+
+
+dmitrii_object = Person("Дмитрий", "17")
+
+dmitrii_object.say_hello()
 ```
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_4.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam8_4.png)
 
 ### Задание 5
+Самостоятельно реализуйте полиморфизм. Он должен отличаться, от того, что указан в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 
 
 ```python
+class Cat:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
+    def info(self):
+        print(f"I am a cat. My name is {self.name}. I am {self.age} years old.")
+
+    def make_sound(self):
+        print("Meow")
+
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"I am a dog. My name is {self.name}. I am {self.age} years old.")
+
+    def make_sound(self):
+        print("Bark")
+
+
+cat1 = Cat("Kitty", 2.5)
+dog1 = Dog("Fluffy", 4)
+
+for animal in (cat1, dog1):
+    animal.make_sound()
+    animal.info()
+    animal.make_sound()
 ```
 
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam6_5.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam8_5.png)
