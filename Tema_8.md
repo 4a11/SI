@@ -166,11 +166,29 @@ dmitrii_object.say_hello()
 
 
 ```python
+class Person(object):
+    def __init__(self):
+        self.name = "Dmitrii"
+
+    def say_hello(self):
+        print(f"{self.name} вас приветствует.")
+
+class Student(Person):
+    def __int__(self):
+        Person.__init__()
+
+    def write_off(self):
+        return "someone write off " + self.name + " work."
+
+
+student_object = Student()
+
+print(student_object.write_off())
 
 ```
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_3.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam8_3.png)
 
 
 ### Задание 4
