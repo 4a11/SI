@@ -242,12 +242,26 @@ print(just_replace(txt))
 ![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_4_1.png)
 
 ### Задание 5
-
+Требуется создать csv-файл «rows_300.csv» со следующими столбцами:
+– № - номер по порядку (от 1 до 300);
+– Секунда – текущая секунда на вашем ПК;
+–  Микросекунда – текущая миллисекунда на часах.
+На каждой итерации цикла искусственно приостанавливайте скрипт на 0,01 секунды.
 
 ```python
-
+import csv
+import datetime
+import time
+ 
+with open('rows_300.csv', 'w', encoding='utf-8', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['№', 'Секунда ', 'Микросекунда'])
+    for line in range(1, 301):
+        writer.writerow([line, datetime.datetime.now().second, datetime.datetime.now().microsecond])
+        time.sleep(0.01)
 ```
 
 #### Результат
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/sam6_5.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_5.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_5_1.png)
