@@ -1,4 +1,4 @@
-Отчет по Теме #7 выполнил(а):
+Отчет по Теме #8 выполнил(а):
 - Прокин Дмитрий Сергеевич
 - ОЗИВТ-22-1-у
 
@@ -20,107 +20,126 @@
 Работу проверили:
 - к.э.н., доцент Панов М.А.
 
-## Лабораторная работа №7
+## Лабораторная работа №8
 ### Задание 1
-
+Создайте класс “Car” с атрибутами производитель и модель. Создайте объект этого класса. Напишите комментарии для кода, объясняющие его работу. Результатом выполнения задания будет листинг кода с комментариями.
 
 ```python
-
+class Car:
+    def __init__(self, make, model): #Объявление класса Car
+        self.make = make    # Объявление аттрибутов класса Car
+        self.model = model  #
+         
+my_car = Car('Toyota', 'Corolla') #Создание объекта класса Car
 ```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task1.png)
 
 ### Задание 2
 
 
 ```python
+class Car: # создание класса
+    def __init__(self, make, model):
+        self.make = make  # отвечает за марку автомобиля
+        self.model = model # отвечает за модель автомобиле
+    def drive(self):
+        print(f"Driving the {self.make} {self.model}") # совмещаем  марку и модель
+
+
+my_car = Car("Toyota", "Corolla") #создания обьекта с аргументами
+my_car.drive()
 
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task2.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab8_2.png)
 
 ### Задание 3
 
 
 ```python
+class Car: # создание класса
+    def __init__(self, make, model):
+        self.make = make  # отвечает за марку автомобиля
+        self.model = model # отвечает за модель автомобиле
+    def drive(self):
+        print(f"Driving the {self.make} {self.model}") # совмещаем  марку и модель
+
+
+my_car = Car("Toyota", "Corolla") #создания обьекта с аргументами
+my_car.drive()
+
+class ElectricCar(Car): # класс являющийся под класом Car 
+    def __init__(self,make,model,battery_capacity):
+        super().__init__(make,model)
+        self.battery_capacity = battery_capacity # устонавливает значения емкости батареи для обьекта класса  электо кар 
+
+    def charge(self): # это метод выводит сообщение о том что происходит зарядка автом с указанной маркой
+        print(f"Charing the {self.make} {self.model} with {self.battery_capacity} kWh")
+
+
+my_electric_car = ElectricCar("Tesla","Model S" , 75) #создания обьекта с аргументами
+my_electric_car.drive() # вызывается  метод  drive и  charge для этого обьекта 
+my_electric_car.charge() # 
+
 
 ```                            
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task3.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab8_3.png)
 
 ### Задание 4
 
 
 ```python
+class Car: # создание класса
+    def __init__(self, make, model):
+        self.make = make  # отвечает за марку автомобиля
+        self.model = model # отвечает за модель автомобиле
 
+    def drive(self):
+        print(f"Driving the {self.make} {self.model}")  # совмещаем  марку и модель
+
+my_car = Car("Toyota", "Corolla")  # создания обьекта с аргументами
+print(my_car.make) # доступ к защищенному атрибуту
+my_car.drive()
 ```
 
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task4.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab8_4.png)
 
 ### Задание 5
 
 
 ```python
+class Shape:
+    def area(self):
+        pass
 
+class Rectangle(Shape): # создание класса
+    def __init__(self, width, height): # определение атрибутов клвсса
+        self.width = width
+        self.height = height
+
+    def area(self): # создания метода класса
+        return self.width * self.height
+
+class Circle(Shape): # создание класса
+    def __init__(self, radius): # определение атрибутов клвсса
+        self.radius = radius
+
+    def area(self): # создания метода класса
+        return 3.14 * self.radius * self.radius
+
+rect=Rectangle(5,5) # определение обьекта класса
+print (rect.area())
+
+cir = Circle(3)  # определение обьекта класса
+print(cir.area())
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task5.png)
-
-### Задание 6
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task6.png)
-
-### Задание 7
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task7.png)
-
-### Задание 8
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task8.png)
-
-### Задание 9
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task9.png)
-
-### Задание 10
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task10.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab8_5.png)
 
 
 ## Самостоятельная работа №8
@@ -139,6 +158,10 @@ Person.say_hello()
 #### Результат
 
 ![Меню](https://github.com/4a11/SI/blob/main/pic/sam7_1.png)
+
+#### Вывод
+
+
 
 ### Задание 2
 Самостоятельно создайте атрибуты и методы для ранее созданного класса. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли
