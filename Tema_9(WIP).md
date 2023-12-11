@@ -1,4 +1,4 @@
-Отчет по Теме #7 выполнил(а):
+Отчет по Теме #9 выполнил(а):
 - Прокин Дмитрий Сергеевич
 - ОЗИВТ-22-1-у
 
@@ -9,43 +9,94 @@
 | Задание 3 | +       |         |
 | Задание 4 | +       |         |
 | Задание 5 | +       |         |
-| Задание 6 | +       |         |
-| Задание 7 | +       |         |
-| Задание 8 | +       |         |
-| Задание 9 | +       |         |
-| Задание 10| +       |         |
 
 знак "+" - задание выполнено; знак "-" - задание не выполнено;
 
 Работу проверили:
 - к.э.н., доцент Панов М.А.
 
-## Лабораторная работа №7
+## Лабораторная работа №9
 ### Задание 1
 
 
 ```python
+class Ivan:
+    __slots__ = ['name']
 
+    def __init__(self, name):
+        if name == 'Иван':
+            self.name = f"Да, я {name}"
+        else:
+            self.name = f"Я не {name}, я Иван"
+
+person1 = Ivan('Алексей')
+person2 = Ivan('Иван')
+print(person1.name)
+print(person2.name)
+
+person2.surname='Петров'
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task1.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab9_1.png)
 
 ### Задание 2
 
 
 ```python
+class Iceream:
+    def __init__(self, ingredient = None):
+        if isinstance(ingredient, str):
+            self.ingredient = ingredient
+        else:
+            self.ingredient = None
+
+
+    def composition(self):
+        if self.ingredient:
+            print(f"Мороженное с {self.ingredient}")
+        else:
+            print('Обычное мороженное')
+
+icecream = Iceream()
+icecream.composition()
+icecream = Iceream('Шоколадом')
+icecream.composition()
+icecream = Iceream(5)
+icecream.composition()
 
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task2.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab9_2.png)
 
 ### Задание 3
 
 
 ```python
+class MyClass:
+    def __init__(self, value):
+        self._value=value
 
+    def set_value(self, value):
+        self._value = value
+
+    def get_value(self):
+        return self._value
+
+    def del_value(self):
+        del self._value
+
+    value = property(get_value, set_value, del_value, "Свойство value" )
+
+obj = MyClass(42)
+print(obj.get_value())
+obj.set_value(45)
+print(obj.get_value())
+obj.set_value(100)
+print(obj.get_value())
+obj.del_value()
+print(obj.get_value())
 ```                            
 #### Результат.
 
@@ -55,75 +106,56 @@
 
 
 ```python
+class Mammal:
+    className = 'Mammal'
 
+class Dog (Mammal):
+    species = 'canine'
+    sounds = 'wow'
+
+class Cat (Mammal):
+    species = 'feline'
+    sounds = 'neow'
+
+dog = Dog()
+print(f"Dog is { dog.className}, but they say {dog.sounds}")
+cat =Cat()
+print(f"Cat is { cat.className}, but they say {cat.sounds}")
 ```
 
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task4.png)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab9_4.png)
 
 ### Задание 5
 
 
 ```python
+class Russian:
+    @staticmethod
+    def greeting():
+        print("Привет")
 
+class English:
+    @staticmethod
+    def greeting():
+        print("Hello")
+
+def greet(language):
+    language.greeting()
+
+ivan = Russian()
+greet(ivan)
+john = English()
+greet (john)
 ```
 #### Результат.
 
-![Меню](https://github.com/4a11/SI/blob/main/pic/task5.png)
-
-### Задание 6
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab9_6.png)
 
 
-```python
 
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task6.png)
-
-### Задание 7
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task7.png)
-
-### Задание 8
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task8.png)
-
-### Задание 9
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task9.png)
-
-### Задание 10
-
-
-```python
-
-```
-#### Результат.
-
-![Меню](https://github.com/4a11/SI/blob/main/pic/task10.png)
-
-
-## Самостоятельная работа №8
+## Самостоятельная работа №9
 
 ### Задание 1
 Классовая структура:
@@ -287,5 +319,9 @@ gardener.harvest()
 #### Результат
 
 ![Меню](https://github.com/4a11/SI/blob/main/pic/sam9.png)
+
+#### Вывод
+
+В данной задаче практически воспроизвелись все основы ООП.
 
 
