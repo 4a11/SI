@@ -1,5 +1,5 @@
 ### Устоновка среды разработки.
-![image](https://github.com/SindaskinNikita/SindaskinNikita/assets/147731691/09f17157-444e-4c7e-b2c2-7aa98a277b62)
+![Меню](https://github.com/4a11/SI/blob/main/pic/lab1_1.png)
 ### Идет устоновка
 ![image](https://github.com/SindaskinNikita/SindaskinNikita/assets/147731691/3ee5bcb9-387f-47ca-ab30-ab6ee2f0dd3c)
 ### Открываем питон
