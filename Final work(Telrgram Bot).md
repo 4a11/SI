@@ -113,7 +113,7 @@ def get_year(message):
 
 
 def save_file(message):
-    doc = Document(r'C:\Users\Дима\PycharmProjects\pythonProject\pattern.docx')
+    doc = Document(r'path')
 
     for paragraph in doc.paragraphs:
         paragraph.font = 'Times New Roman'
